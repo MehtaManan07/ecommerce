@@ -159,8 +159,9 @@ export const SHOP_DATA = [
     items: [
       {
         id: 1,
-        name: "Blue Tanktop",
-        imageUrl: "https://i.ibb.co/7CQVJNm/blue-tank.png",
+        name: "Jeans",
+        imageUrl:
+          "https://images.unsplash.com/photo-1535914253584-25160fb61079?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
         price: 25,
       },
       {
