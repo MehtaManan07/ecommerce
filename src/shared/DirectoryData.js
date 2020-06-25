@@ -14,8 +14,7 @@ export const sections = [
   },
   {
     title: "sneakers",
-    imageUrl:
-      "https://images.unsplash.com/photo-1465479423260-c4afc24172c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
     id: 3,
     linkUrl: "shop/sneakers",
   },
