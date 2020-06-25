@@ -7,12 +7,10 @@ const Directory = () => {
   const [items, setItems] = useState(sections);
   return (
     <div className="directory-menu">
-      {items.map((item) => (
+      {items.map(({item, ...otherProps}) => (
         <MenuItem
-          key={item.title}
-          imageUrl={item.imageUrl}
-          title={item.title}
-          size={item.size}
+          key={item}
+          {...otherProps}
         />
       ))}
     </div>
