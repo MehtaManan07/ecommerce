@@ -5,9 +5,6 @@ import PreviewCollection from '../../components/preview-collection/PreviewCollec
 
 const Shop = () => {
 const [shop_data, setShop_data] = useState(SHOP_DATA)
- useEffect(() => {
-     console.log(shop_data)
- },[])
     return (
         <div className="shop-page">
             {shop_data.map(({id, ...otherProps}) => (
