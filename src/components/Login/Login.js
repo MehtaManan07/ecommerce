@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import FormInput from "../form-input/FormInput";
+import './Login.scss'
 
 const Login = () => {
     const [user , setUser] = useState({
@@ -15,7 +17,6 @@ const Login = () => {
     }
 
   const handleSubmit = (e) => {
-    const { email, password } = user;
     e.preventDefault();
     console.log(user);
   };
@@ -26,22 +27,22 @@ const Login = () => {
       <span> Sign in with your email and password </span>
 
       <form onSubmit={handleSubmit}>
-        <input
+        <FormInput
           name="email"
-          onChange={handleChange}
+          handleChange={handleChange}
           value={user.email}
+          label="Email"
           required
           type="email"
         />
-        <label> Email </label>
-        <input
+        <FormInput
           name="password"
-          onChange={handleChange}
+          handleChange={handleChange}
           value={user.password}
           required
+          label="Password"
           type="password"
         />
-        <label> Password </label>
         <input type="submit" value="SubmitForm" />
       </form>
     </div>
