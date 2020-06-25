@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import FormInput from "../form-input/FormInput";
 import './Login.scss'
+import MyButton from "../myButton/MyButton";
 
 const Login = () => {
     const [user , setUser] = useState({
@@ -43,7 +44,7 @@ const Login = () => {
           label="Password"
           type="password"
         />
-        <input type="submit" value="SubmitForm" />
+        <MyButton type="submit" value="SubmitForm"> Login </MyButton>
       </form>
     </div>
   );
