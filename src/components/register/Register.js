@@ -17,17 +17,24 @@ const Register = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (password !== confirmPassword) {
+    if (displayName.length < 4) {
+      toast.error("Name must be atleast 4 characters long")
+      return;
+    } else if (password.length < 6) {
+      toast.error("Password must be at least 6 characters long");
+      return;
+    } else if (password !== confirmPassword) {
       toast.error("Passwords must match");
       return;
     }
+
     try {
       const { user } = await auth.createUserWithEmailAndPassword(
         email,
         password
       );
       await createUserProfileDoc(user, { displayName });
-      toast.success('Register success')
+      toast.success("Register success");
       setUserData({
         displayName: "",
         email: "",
