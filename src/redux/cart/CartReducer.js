@@ -1,3 +1,5 @@
+import { addCartItem } from "./CartUtils";
+
 const { TOGGLE_CART_HIDDEN, ADD_ITEM } = require("../types");
 
 const initialState = {
@@ -15,7 +17,7 @@ const cartReducer = (state = initialState, { type, payload }) => {
     case ADD_ITEM:
       return {
         ...state,
-        cartItems: [...state.cartItems, payload],
+        cartItems: addCartItem(state.cartItems, payload)
       };
     default:
       return state;
