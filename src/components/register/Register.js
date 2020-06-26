@@ -27,6 +27,7 @@ const Register = () => {
         password
       );
       await createUserProfileDoc(user, { displayName });
+      toast.success('Register success')
       setUserData({
         displayName: "",
         email: "",
@@ -57,7 +58,7 @@ const Register = () => {
           name="displayName"
           value={displayName}
           onChange={handleChange}
-          label="Display Name"
+          label="Name"
           required
         ></FormInput>
         <FormInput
@@ -79,8 +80,8 @@ const Register = () => {
         <FormInput
           type="password"
           name="confirmPassword"
-          value={displayName}
-          onChange={confirmPassword}
+          value={confirmPassword}
+          onChange={handleChange}
           label="Confirm Password"
           required
         ></FormInput>
