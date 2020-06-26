@@ -1,6 +1,6 @@
 import { addCartItem } from "./CartUtils";
 
-const { TOGGLE_CART_HIDDEN, ADD_ITEM } = require("../types");
+import { TOGGLE_CART_HIDDEN, ADD_ITEM } from "../types"
 
 const initialState = {
   hidden: true,
@@ -25,3 +25,4 @@ const cartReducer = (state = initialState, { type, payload }) => {
 };
 
 export default cartReducer;
+
