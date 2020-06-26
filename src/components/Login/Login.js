@@ -31,6 +31,7 @@ const Login = () => {
       } else if(error.code === 'auth/wrong-password') {
         toast.error('Incorrect Password')
       }
+      console.log(error)
     }
   };
 
