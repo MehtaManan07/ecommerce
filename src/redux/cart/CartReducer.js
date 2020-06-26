@@ -1,7 +1,8 @@
-const { TOGGLE_CART_HIDDEN } = require("../types");
+const { TOGGLE_CART_HIDDEN, ADD_ITEM } = require("../types");
 
 const initialState = {
   hidden: true,
+  cartItems: [],
 };
 
 const cartReducer = (state = initialState, { type, payload }) => {
@@ -11,9 +12,14 @@ const cartReducer = (state = initialState, { type, payload }) => {
         ...state,
         hidden: !state.hidden,
       };
+    case ADD_ITEM:
+      return {
+        ...state,
+        cartItems: [...state.cartItems, payload],
+      };
     default:
-        return state
+      return state;
   }
 };
 
-export default cartReducer
+export default cartReducer;
