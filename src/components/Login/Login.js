@@ -45,8 +45,10 @@ const Login = () => {
           label="Password"
           type="password"
         />
+        <div className="buttons">
         <MyButton type="submit" value="SubmitForm">Login</MyButton>
-        <MyButton onClick={loginWithGoogle} value="SubmitForm">Login with google</MyButton>
+        <MyButton onClick={loginWithGoogle} isGoogleSignin value="SubmitForm">Login with google</MyButton>
+        </div>
       </form>
     </div>
   );

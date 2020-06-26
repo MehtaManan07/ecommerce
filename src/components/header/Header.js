@@ -10,12 +10,25 @@ const Header = ({ currentUser }) => {
         <Logo className="logo" />
       </Link>
       <div className="options">
-        <Link to="/shop" className="option">SHOP</Link>
-        <Link to="/shop" className="option">Contact</Link>
+        <Link to="/shop" className="option">
+          SHOP
+        </Link>
+        <Link to="/shop" className="option">
+          Contact
+        </Link>
         {!currentUser ? (
-          <Link className="option" to="/signin"> Login </Link>
+          <Link className="option" to="/signin">
+            {" "}
+            Login{" "}
+          </Link>
         ) : (
-          <div style={{cursor: 'pointer'}} className="option" onClick={() => auth.signOut()}> Logout </div>
+          <div
+            style={{ cursor: "pointer" }}
+            className="option"
+            onClick={() => auth.signOut()}
+          >
+            Logout
+          </div>
         )}
       </div>
     </div>
