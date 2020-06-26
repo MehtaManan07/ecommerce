@@ -8,6 +8,7 @@ import LoginRegister from "./pages/loginRegister/LoginRegister";
 import { auth, createUserProfileDoc } from "./firebase/FirebaseUtils";
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/UserActions";
+import Product from "./pages/Product";
 
 class App extends React.Component {
   constructor() {
@@ -49,6 +50,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
+          <Route path="/product" component={Product} />
           <Route path="/shop" component={Shop} />
           <Route
             exact
