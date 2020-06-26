@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./Register.scss";
 import FormInput from "../form-input/FormInput";
 import MyButton from "../myButton/MyButton";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { auth, createUserProfileDoc } from "../../firebase/FirebaseUtils";
 
 const Register = () => {
   const [userData, setUserData] = useState({
@@ -12,18 +15,42 @@ const Register = () => {
   });
   const { displayName, email, password, confirmPassword } = userData;
 
-  const handleSubmit = async event => {
-      event.preventDefault()
-      if(password !== confirmPassword) {
-          alert()
-      }
-  }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (password !== confirmPassword) {
+      toast.error("Passwords must match");
+      return;
+    }
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      await createUserProfileDoc(user, { displayName });
+      setUserData({
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  const handleChange = 2;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   return (
     <div className="sign-up">
       <h2> I do not have an account </h2>
       <span> Sign up with your email and password </span>
+      <ToastContainer />
       <form onSubmit={handleSubmit} className="sign-up-form">
         <FormInput
           type="text"
