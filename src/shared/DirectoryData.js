@@ -19,7 +19,7 @@ export const sections = [
     linkUrl: "shop/sneakers",
   },
   {
-    title: "womens",
+    title: "women's",
     imageUrl:
       "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
     size: "large",
@@ -27,7 +27,7 @@ export const sections = [
     linkUrl: "shop/womens",
   },
   {
-    title: "mens",
+    title: "men's",
     imageUrl:
       "https://images.unsplash.com/photo-1555529669-2269763671c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
     size: "large",
