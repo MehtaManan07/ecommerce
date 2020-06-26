@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Homepage from "./pages/homepage/Homepage";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Shop from "./pages/shop/Shop";
 import Header from "./components/header/Header";
 import LoginRegister from "./pages/loginRegister/LoginRegister";
@@ -51,17 +51,21 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/shop" component={Shop} />
-          <Route path="/signin" component={LoginRegister} />
+          <Route exact path="/signin" render={() => this.props.currentUser ? <Redirect to="/" /> : <LoginRegister /> } />
         </Switch>
       </div>
     );
   }
 }
 
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+})
+
 const mapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 });
 
-export default connect(null /* Comment1 */, mapDispatchToProps)(App);
+export default connect(mapStateToProps /* Comment1 */, mapDispatchToProps)(App);
 
-// Comment 1 : bcoz we are getting no state from reducer
+// Comment 1 : bcoz we are state from reducer
