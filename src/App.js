@@ -8,7 +8,7 @@ import LoginRegister from "./pages/loginRegister/LoginRegister";
 import { auth, createUserProfileDoc } from "./firebase/FirebaseUtils";
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/UserActions";
-import Product from "./pages/Product";
+import Product from "./pages/singleProduct/Product";
 
 class App extends React.Component {
   constructor() {
