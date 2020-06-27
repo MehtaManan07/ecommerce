@@ -5,16 +5,20 @@ import MyButton from "../myButton/MyButton";
 import CartItem from "../cart-item/CartItem";
 import { selectCartItems } from "../../redux/cart/CartSelector";
 import { createStructuredSelector } from "reselect";
+import { withRouter } from "react-router-dom";
 
-const CartDropdown = ({ cartItems }) => {
+const CartDropdown = ({ cartItems, history }) => {
   return (
     <div className="cart-dropdown">
       <div className="cart-items">
-        {cartItems.map((cartItem) => (
+        {
+          cartItems.length ?
+          cartItems.map((cartItem) => (
           <CartItem key={cartItem.id} item={cartItem} />
-        ))}
+        )) : <span className="empty-message"> Your cart is empty <span role="img" aria-label=""> &#128553; </span> </span>}
       </div>
-      <MyButton> CHECKOUT </MyButton>
+      
+      <MyButton onClick={() => history.push('/checkout')}> CHECKOUT </MyButton>
     </div>
   );
 };
@@ -23,4 +27,4 @@ const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems, // this will make sure that cartdropdown comp isn't getting rerendered whenever the state changes that is unrelated to the cart items
 });
 
-export default connect(mapStateToProps)(CartDropdown);
+export default withRouter(connect(mapStateToProps)(CartDropdown));
