@@ -3,8 +3,6 @@ import MyButton from "../myButton/MyButton";
 import "./CollectionItems.scss";
 import { connect } from "react-redux";
 import { addItem } from "../../redux/cart/CartActions";
-import { Link } from "react-router-dom";
-import { Card, Image } from "semantic-ui-react";
 
 const CollectionItem = ({ item, addItem }) => {
   const { id, name, price, imageUrl } = item;
