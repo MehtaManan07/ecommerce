@@ -22,10 +22,10 @@ const Checkout = ({ cartItems, total }) => {
           <span> Quantity </span>
         </div>
         <div className="header-block">
-          <span> Remove </span>
+          <span> Price </span>
         </div>
         <div className="header-block">
-          <span> Price </span>
+          <span> Remove </span>
         </div>
       </div>
       {cartItems.map((cartItem) => (
