@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import MyButton from "../myButton/MyButton";
 import CartItem from "../cart-item/CartItem";
 import { selectCartItems } from "../../redux/cart/CartSelector";
+import { createStructuredSelector } from "reselect";
 
 const CartDropdown = ({ cartItems }) => {
   return (
@@ -18,8 +19,8 @@ const CartDropdown = ({ cartItems }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  cartItems: selectCartItems(state), // this will make sure that cartdropdown comp isn't getting rerendered whenever the state changes that is unrelated to the cart items
+const mapStateToProps = createStructuredSelector({
+  cartItems: selectCartItems, // this will make sure that cartdropdown comp isn't getting rerendered whenever the state changes that is unrelated to the cart items
 });
 
 export default connect(mapStateToProps)(CartDropdown);
