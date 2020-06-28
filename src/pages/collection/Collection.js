@@ -4,14 +4,12 @@ import { connect } from "react-redux";
 import { selectCollection } from "../../redux/shop/ShopSelector";
 import CollectionItems from "../../components/collection-items/CollectionItems";
 const Collection = ({collection}) => {
-  console.log('match.params.collectionId:',collection.items)
-  const { title, items } = collection
   return (
     <div className="collection-page">
-      <h2 className="title"> {title} </h2>
+      <h2 className="title"> {collection.title} </h2>
       <div className="items">
         {
-          items.map(item => <CollectionItems key={item.id} item={item} />)
+          collection.items.map(item => <CollectionItems key={item.id} item={item} />)
         }
       </div>
     </div>

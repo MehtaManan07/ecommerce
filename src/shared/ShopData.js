@@ -3,8 +3,8 @@ export const SHOP_DATA = {
     id: 1,
     title: "Hats",
     routeName: "hats",
-    items: [
-      {
+    items: {
+     1: {
         id: 1,
         name: "Brown Brim",
         imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
@@ -12,7 +12,7 @@ export const SHOP_DATA = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         price: 25,
       },
-      {
+      2:{
         id: 2,
         name: "Blue Beanie",
         imageUrl: "https://i.ibb.co/ypkgK0X/blue-beanie.png",
@@ -20,7 +20,7 @@ export const SHOP_DATA = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         price: 18,
       },
-      {
+     3: {
         id: 3,
         name: "Brown Cowboy",
         imageUrl: "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
@@ -28,7 +28,7 @@ export const SHOP_DATA = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         price: 35,
       },
-      {
+     4: {
         id: 4,
         name: "Grey Brim",
         imageUrl: "https://i.ibb.co/RjBLWxB/grey-brim.png",
@@ -36,7 +36,7 @@ export const SHOP_DATA = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         price: 25,
       },
-      {
+     5: {
         id: 5,
         name: "Green Beanie",
         imageUrl: "https://i.ibb.co/YTjW3vF/green-beanie.png",
@@ -44,7 +44,7 @@ export const SHOP_DATA = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         price: 18,
       },
-      {
+     6: {
         id: 6,
         name: "Palm Tree Cap",
         imageUrl: "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
@@ -52,7 +52,7 @@ export const SHOP_DATA = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         price: 14,
       },
-      {
+     7: {
         id: 7,
         name: "Red Beanie",
         imageUrl: "https://i.ibb.co/bLB646Z/red-beanie.png",
@@ -60,7 +60,7 @@ export const SHOP_DATA = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         price: 18,
       },
-      {
+     8: {
         id: 8,
         name: "Wolf Cap",
         imageUrl: "https://i.ibb.co/1f2nWMM/wolf-cap.png",
@@ -68,7 +68,7 @@ export const SHOP_DATA = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         price: 14,
       },
-      {
+     9: {
         id: 9,
         name: "Blue Snapback",
         imageUrl: "https://i.ibb.co/X2VJP2W/blue-snapback.png",
@@ -76,7 +76,7 @@ export const SHOP_DATA = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         price: 16,
       },
-    ],
+    }
   },
   sneakers: {
     id: 2,
